@@ -52,8 +52,11 @@ Connect to the LoadBalancer at [http://172.17.17.10](http://172.17.17.10)
 Connect to the LoadBalancer Statistics Admin page at [http://172.17.17.10:8080/haproxy?stats](http://172.17.17.10:8080/haproxy?stats)
 
 To access the Webservers individually go to:
+
 Web1 - [http://172.17.17.11](http://172.17.17.11)
+
 Web2 - [http://172.17.17.12](http://172.17.17.12)
+
 Web3 - [http://172.17.17.13](http://172.17.17.13)
 
 ### Applying salt changes
