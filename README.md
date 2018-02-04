@@ -5,7 +5,9 @@
 ## Prerequisites
 
 - Install Vagrant
+
     I prefer using brew to install packages on a Mac OS X. See my blog post on how to setup and use brew.
+    
     http://www.rominet.com/blog/homebrew-the-best-package-manager-for-mac-os
     
     `$>brew install vagrant-completion`
@@ -15,6 +17,7 @@
    `$>brew cask install virtualbox`
    
 Alternatively you can also install Vagrant-Manager
+
 [Vagrant-Manager](http://vagrantmanager.com) helps you manage all your virtual machines in one place directly from the menubar.
 
 `$ brew cask install vagrant-manager`
@@ -61,6 +64,12 @@ Web1 - [http://172.17.17.11](http://172.17.17.11)
 Web2 - [http://172.17.17.12](http://172.17.17.12)
 
 Web3 - [http://172.17.17.13](http://172.17.17.13)
+
+### Single html root served by vagrant
+If you want to deploy your html file in one location and be served to all 3 nodes make the following changes:
+
+1) Edit web-setup.sh and uncomment the following line
+`#sed -i "/^\troot */c\\\troot /vagrant/www/html;" /etc/nginx/sites-enabled/default`
 
 ### Applying salt changes
 If you decide to make some changes to the system using salt, you can modify the files under saltstack/salt
