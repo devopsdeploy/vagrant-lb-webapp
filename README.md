@@ -1,4 +1,4 @@
-# Run multiple nginx webserver behind a HAProxy LB bootstraping with saltstack
+# Run multiple nginx webserver behind a HAProxy LB and bootstraping with saltstack
   - VirtualBox (Ubuntu)
   - Masterless Saltstack
   
@@ -7,9 +7,11 @@
 - Install Vagrant
     I prefer using brew to install packages on a Mac OS X. See my blog post on how to setup and use brew.
     http://www.rominet.com/blog/homebrew-the-best-package-manager-for-mac-os
+    
     $>brew install vagrant-completion
    
 - Install VirtualBox
+
    $>brew cask install virtualbox
    
 Alternatively you can also install Vagrant-Manager
