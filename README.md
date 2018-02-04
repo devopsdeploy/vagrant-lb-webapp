@@ -66,8 +66,11 @@ Web3 - [http://172.17.17.13](http://172.17.17.13)
 If you decide to make some changes to the system using salt, you can modify the files under saltstack/salt
 
 From each node you can: (The command we will use is salt-call because this is a Masterless saltstack)
-Apply changes - $>salt-call state.apply
-List grains - $>salt-call grains.ls
-List grain items - $>salt-call grains.items
+
+Apply changes - `$>salt-call state.apply`
+
+List grains - `$>salt-call grains.ls`
+
+List grain items - `$>salt-call grains.`items`
 
 Grains are basically the metadata about your system.
