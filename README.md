@@ -49,15 +49,13 @@ Salt will install common packages as follow (this is under saltstack/salt/common
 
 In this example the proxy timeouts for server and client are set to 5s so that every 5s you get a new server for demonstration purposes.
 
-Connect to the LoadBalancer at:
+Connect to the LoadBalancer at:__
 
-
- [http://172.17.17.10](http://172.17.17.10)
+ [http://172.17.17.10](http://172.17.17.10)__
  
-Connect to the LoadBalancer Statistics Admin page at:
+Connect to the LoadBalancer Statistics Admin page at:__
 
-
- [http://172.17.17.10:8080/haproxy?stats](http://172.17.17.10:8080/haproxy?stats)
+ [http://172.17.17.10:8080/haproxy?stats](http://172.17.17.10:8080/haproxy?stats)__
  
 
 To access the Webservers individually go to:
