@@ -83,3 +83,6 @@ List grains - `$>salt-call grains.ls`
 List grain items - `$>salt-call grains.`items`
 
 Grains are basically the metadata about your system.
+
+
+NOTE: I think maybe docker provider may be a good choice instead of using VirtualBox. Or even better not use Vagrant at all but setup your dev environment completely on docker. Just a thought.
