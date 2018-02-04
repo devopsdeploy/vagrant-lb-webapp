@@ -59,9 +59,6 @@ backend webservers
     server web1 172.17.17.11:80
     server web2 172.17.17.12:80
     server web3 172.17.17.13:80
-    server web1 172.17.17.11:80 check
-    server web2 172.17.17.12:80 check
-    server web3 172.17.17.13:80 check
 
 listen admin
     bind *:8080
@@ -69,5 +66,6 @@ listen admin
 EOD
 
   cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.orig
-  /usr/sbin/service haproxy restart
+  /usr/sbin/service haproxy stop
+  /usr/sbin/service haproxy start
 fi
