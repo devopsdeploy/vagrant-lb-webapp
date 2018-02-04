@@ -1,0 +1,4 @@
+roles:
+    - haproxy
+environment:
+    - dev

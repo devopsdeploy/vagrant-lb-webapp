@@ -1,0 +1,20 @@
+## Look locally for files
+file_client: local
+
+## Where your salt states & files are located
+file_roots:
+  base:
+    - /vagrant/saltstack/salt
+  webserver:
+    - /vagrant/saltstack/salt/webserver
+  haproxy:
+    - /vagrant/saltstack/salt/haproxy
+  monitoring:
+    - /vagrant/saltstack/salt/monitoring
+  nginx:
+    - /vagrant/saltstack/salt/nginx
+
+## Where your Pillar data is located (see README.md for more details)
+pillar_roots:
+  base:
+    - /vagrant/saltstack/pillar
