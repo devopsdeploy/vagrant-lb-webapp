@@ -8,16 +8,16 @@
     I prefer using brew to install packages on a Mac OS X. See my blog post on how to setup and use brew.
     http://www.rominet.com/blog/homebrew-the-best-package-manager-for-mac-os
     
-    $>brew install vagrant-completion
+    `$>brew install vagrant-completion`
    
 - Install VirtualBox
 
-   $>brew cask install virtualbox
+   `$>brew cask install virtualbox`
    
 Alternatively you can also install Vagrant-Manager
 [Vagrant-Manager](http://vagrantmanager.com) helps you manage all your virtual machines in one place directly from the menubar.
 
-$ brew cask install vagrant-manager
+`$ brew cask install vagrant-manager`
 
 ## Nodes 
 - haproxy (172.17.17.9)
