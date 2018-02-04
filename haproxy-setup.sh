@@ -57,8 +57,8 @@ backend webservers
     balance roundrobin
     option httpchk
     server web1 172.17.17.11:80
-    server web1 172.17.17.12:80
-    server web1 172.17.17.13:80
+    server web2 172.17.17.12:80
+    server web3 172.17.17.13:80
     server web1 172.17.17.11:80 check
     server web2 172.17.17.12:80 check
     server web3 172.17.17.13:80 check
