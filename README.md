@@ -6,7 +6,7 @@
 
 You can either follow step-by-step detailed bellow or just simply run the following command to install all the prerequisites.
 
-`make` installs both vagrant and virtualbox.
+`make` (installs both vagrant and virtualbox.)
 
 1) Install Vagrant
 
@@ -20,7 +20,7 @@ You can either follow step-by-step detailed bellow or just simply run the follow
 
    `$>brew cask install virtualbox`
    
-Alternatively you can also install Vagrant-Manager
+3) Alternatively you can also install Vagrant-Manager
 
 [Vagrant-Manager](http://vagrantmanager.com) helps you manage all your virtual machines in one place directly from the menubar.
 
