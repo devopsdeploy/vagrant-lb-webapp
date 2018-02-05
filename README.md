@@ -65,11 +65,13 @@ Web2 - [http://172.17.17.12](http://172.17.17.12)
 
 Web3 - [http://172.17.17.13](http://172.17.17.13)
 
-### Single html root served by vagrant
-If you want to deploy your html file in one location and be served to all 3 nodes make the following changes:
+### Centralized document root served by vagrant
+If you want to deploy your html file from a centralized location and be served to all 3 nodes make the following changes:
 
 1) Edit web-setup.sh and uncomment the following line
 `#sed -i "/^\troot */c\\\troot /vagrant/www/html;" /etc/nginx/sites-enabled/default`
+
+relaunch the instances and everthing should be good to go
 
 ### Applying salt changes
 If you decide to make some changes to the system using salt, you can modify the files under saltstack/salt
