@@ -4,7 +4,11 @@
   
 ## Prerequisites
 
-- Install Vagrant
+You can either follow step-by-step detailed bellow or just simply run the following command to install all the prerequisites.
+
+`make` installs both vagrant and virtualbox.
+
+1) Install Vagrant
 
     I prefer using brew to install packages on a Mac OS X. See my blog post on how to setup and use brew.
     
@@ -12,7 +16,7 @@
     
     `$>brew install vagrant-completion`
    
-- Install VirtualBox
+2) Install VirtualBox
 
    `$>brew cask install virtualbox`
    
