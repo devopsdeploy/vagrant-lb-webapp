@@ -3,7 +3,9 @@
 if [ ! -f /etc/haproxy/haproxy.cfg ]; then
 
   # Install haproxy
-  /usr/bin/apt-get -y install haproxy
+  add-apt-repository -y ppa:vbernat/haproxy-1.7
+  apt-get update
+  apt-get -y install haproxy
   mkdir -p /run/haproxy
 
 
@@ -24,6 +26,14 @@ global
         user haproxy
         group haproxy
         daemon
+
+    # Default SSL material locations
+    ca-base /etc/ssl/certs
+    crt-base /etc/ssl/private
+
+    # Default ciphers to use on SSL-enabled listening sockets.
+    # For more information, see ciphers(1SSL).
+    ssl-default-bind-ciphers kEECDH+aRSA+AES:kRSA+AES:+AES256:RC4-SHA:!kEDH:!LOW:!EXP:!MD5:!aNULL:!eNULL
 
 defaults
         log                     global
@@ -55,10 +65,13 @@ frontend http-in
 
 backend webservers
     balance roundrobin
-    option httpchk
-    server web1 172.17.17.11:80
-    server web2 172.17.17.12:80
-    server web3 172.17.17.13:80
+    option forwardfor
+    http-request set-header X-Forwarded-Port %[dst_port]
+    http-request add-header X-Forwarded-Proto https if { ssl_fc }
+    option httpchk HEAD / HTTP/1.1\r\nHost:localhost
+    server web1 172.17.17.11:80 check
+    server web2 172.17.17.12:80 check
+    server web3 172.17.17.13:80 check
 
 listen admin
     bind *:8080

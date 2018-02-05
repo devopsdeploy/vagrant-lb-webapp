@@ -23,7 +23,7 @@ Alternatively you can also install Vagrant-Manager
 `$ brew cask install vagrant-manager`
 
 ## Nodes 
-- haproxy (172.17.17.9) - Using roundrobin as the balancing mode
+- haproxy (172.17.17.9) - Using roundrobin as the balancing mode. Be careful this method has a limit of # nodes (4095 !)
 - web1    (172.17.17.10)
 - web2    (172.17.17.11)
 - web3    (172.17.17.12)
